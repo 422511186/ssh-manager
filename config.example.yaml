@@ -1,0 +1,37 @@
+# SSH-Manager Configuration Example
+
+general:
+  # Interval in seconds to check for new sessions
+  check_interval: 5
+  
+  # Path to store ban rules
+  config_path: /etc/ssh-manager/ban_rules.yaml
+
+ban:
+  # Enable ban functionality
+  enabled: true
+  
+  # Users to ban (add usernames here)
+  users: []
+  
+  # IPs to ban (add IP addresses here)
+  ips: []
+  
+  # IP ranges to ban (CIDR notation)
+  ip_ranges: []
+  
+  # Use /etc/hosts.deny for blocking
+  use_hosts_deny: true
+  
+  # Use iptables for blocking
+  use_iptables: true
+
+monitor:
+  # Automatically kill idle sessions
+  auto_kill_idle: false
+  
+  # Idle threshold in minutes
+  idle_threshold: 30
+  
+  # Refresh interval in seconds
+  refresh_seconds: 5
